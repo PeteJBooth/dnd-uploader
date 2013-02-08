@@ -87,7 +87,7 @@ function dnduploader(options) {
 		var invalidFiles = [];
 		this.className = "";
 		event.preventDefault && event.preventDefault();
-		
+		console.log(event.dataTransfer)
 		for(var fileCount = 0; fileCount < event.dataTransfer.files.length; fileCount++){
 			if (that.acceptedTypes[event.dataTransfer.files[fileCount].type] === true) {
 				var icon = that.fileIcons[event.dataTransfer.files[fileCount].type];
@@ -98,7 +98,7 @@ function dnduploader(options) {
 				var fileObj = document.createElement('div');	
 				fileObj.setAttribute('class','fileBox')
 				var imgObj = document.createElement('img');
-				imgObj.setAttribute('src','/images/fileicons/' + icon + '.png');
+				imgObj.setAttribute('src','images/fileicons/' + icon + '.png');
 				imgObj.setAttribute('alt', event.dataTransfer.files[fileCount].name);
 				var nameObj = document.createTextNode(event.dataTransfer.files[fileCount].name);
 				fileObj.appendChild(imgObj);

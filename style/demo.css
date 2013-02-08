@@ -1,0 +1,2 @@
+div#dropzone {border:1px dotted black; height:100px;width:300px;}
+div#dropzone.hover {border:2px dotted black;}
